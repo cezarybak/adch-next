@@ -8,11 +8,7 @@ type NewsletterBodyType = {
 
 const endpoint = `${CMS_LINK}/newsletter`;
 
-export const sendNewsletter = async (
-  body: NewsletterBodyType
-): Promise<SendNewsletterType> => {
-  return await axios
-    .post(endpoint, body, { auth })
-    .then((res) => res)
-    .catch((err) => err);
+export const sendNewsletter = (body: NewsletterBodyType) => {
+  console.log([endpoint, body, auth]);
+  return axios.post(endpoint, body, { auth });
 };

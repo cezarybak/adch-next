@@ -6,13 +6,13 @@ type GetDataType = {
   slug?: string;
 };
 
-export const getData = async <T>({ type, slug }: GetDataType): Promise<T> => {
+export const getData = <T>({ type, slug }: GetDataType): Promise<T> => {
   const endpointMap = {
     page: `${CMS_LINK}/${type}/${slug}`,
     pages: `${CMS_LINK}/${type}`,
   };
 
-  return await axios
+  return axios
     .get(endpointMap[type], { auth })
     .then((res) => res.data)
     .catch((err) => err);

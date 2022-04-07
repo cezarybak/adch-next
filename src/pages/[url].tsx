@@ -1,9 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
 import SEO from "../components/SEO";
+import Testimonials from "../components/Testimonials";
 import { getData } from "../services";
-import { GetPagesType, GetPageType } from "../types";
+import { GetPagesType, GetPageType, SectionTypes } from "../types";
 
 type SeoType = {
   title: string;
@@ -32,11 +35,20 @@ const MainPage = ({ pagesData, currentPageData }: Props) => {
 
   const { metaContent, title } = seoMap[router.asPath];
 
+  const findSection = (searchElement: SectionTypes) =>
+    currentPageData.sections.find((e) => e?.type === searchElement);
+
   return (
     <>
       <Navbar pagesData={pagesData} />
       <SEO title={`Breally | ${title}`} metaContent={metaContent} />
-      <main></main>
+      <main className="w-full h-full">
+        {findSection("hero") && <Hero heroData={findSection("hero")!} />}
+        {findSection("testimonial") && (
+          <Testimonials testimonialsData={findSection("testimonial")!} />
+        )}
+        {findSection("newsletter") && <Newsletter />}
+      </main>
     </>
   );
 };

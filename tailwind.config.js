@@ -10,7 +10,6 @@ module.exports = {
       colors: {
         BLACK: {
           DEFAULT: "#231E1E",
-          LIGHT: "#F1F0F0",
           DARK: "#989898",
         },
         PINK: {
@@ -24,6 +23,9 @@ module.exports = {
         },
         GRAY: {
           DEFAULT: "#F1F0F0",
+        },
+        GREEN: {
+          DEFAULT: "#5EDC4B",
         },
       },
       fontFamily: {
