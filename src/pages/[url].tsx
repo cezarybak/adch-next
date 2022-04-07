@@ -75,11 +75,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const pagesData = await getData<GetPagesType>({ type: "pages" });
 
-  const mapPaths = pagesData.map((e) => {
-    return {
-      params: { url: e.url.replace("/", ""), id: e.id },
-    };
-  });
+  const mapPaths = pagesData
+    .map((e) => {
+      return {
+        params: { url: e.url.replace("/", ""), id: e.id },
+      };
+    })
+    .filter((e) => e.params.url);
+
+  console.log(mapPaths);
 
   return {
     paths: mapPaths,
