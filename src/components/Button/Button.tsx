@@ -2,7 +2,7 @@ type Props = {
   content: string;
   type: "submit" | "button";
   disabled?: boolean;
-  onClick?: any;
+  onClick?: () => void;
 };
 
 export const Button = ({ content, type, disabled, onClick }: Props) => {
