@@ -11,7 +11,9 @@ export const Button = ({ content, type, disabled, onClick }: Props) => {
       disabled={disabled}
       onClick={onClick}
       type={type}
-      className={`${disabled && "bg-gray-200 cursor-not-allowed"} bg-PINK
+      className={`${
+        disabled && "bg-gray-200 text-[16px] leading-[24px] cursor-not-allowed"
+      } bg-PINK
       } py-3 px-[54px] cursor-pointer rounded-3xl`}
     >
       {content}

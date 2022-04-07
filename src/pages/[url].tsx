@@ -83,8 +83,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     })
     .filter((e) => e.params.url);
 
-  console.log(mapPaths);
-
   return {
     paths: mapPaths,
     fallback: false,
