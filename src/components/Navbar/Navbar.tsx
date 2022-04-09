@@ -30,7 +30,6 @@ export const Navbar = ({ pagesData }: Props) => {
                     "underline underline-offset-8 decoration-2 decoration-DARK"
                   } `}
                 >
-                  {console.log("assaas", url)}
                   {url.replace("/", "")}
                 </a>
               </Link>
