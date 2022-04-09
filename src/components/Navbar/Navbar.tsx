@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { GetPagesType } from "../../types";
 import Button from "../Button";
 import Logo from "./../../assets/Logo.svg";
@@ -8,6 +9,9 @@ type Props = {
 };
 
 export const Navbar = ({ pagesData }: Props) => {
+  const router = useRouter();
+  const { asPath } = router;
+
   return (
     <footer className="py-6 px-16 border-b-[1px] border-GRAY">
       <div className="flex justify-between">
@@ -18,9 +22,15 @@ export const Navbar = ({ pagesData }: Props) => {
             </a>
           </Link>
           <div className="flex gap-x-12">
-            {pagesData.map(({ id, url }, index) => (
+            {pagesData.map(({ id, url }) => (
               <Link key={id} href={url}>
-                <a className="capitalize text-[16px] ">
+                <a
+                  className={`capitalize text-[16px] hover:font-medium ${
+                    asPath == url &&
+                    "underline underline-offset-8 decoration-2 decoration-DARK"
+                  } `}
+                >
+                  {console.log("assaas", url)}
                   {url.replace("/", "")}
                 </a>
               </Link>

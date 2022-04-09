@@ -17,9 +17,9 @@ export const Newsletter = () => {
 
     sendNewsletter({ email })
       .then((e) => {
-        setEmail("");
         setStatus({ message: e.data.message, status: e.status });
         setPending(false);
+        setEmail("");
       })
       .catch((e) => {
         setStatus({
@@ -38,8 +38,9 @@ export const Newsletter = () => {
         </h1>
         <div className="flex gap-x-[16px]">
           <input
+            value={email}
             placeholder="Type your email"
-            className="bg-GRAY rounded-3xl w-[416px]  px-[32px] py-[14px]"
+            className="bg-GRAY rounded-3xl placeholder-BLACK w-[416px]  px-[32px] py-[14px]"
             onChange={(e) => setEmail(e.target.value)}
           />
 

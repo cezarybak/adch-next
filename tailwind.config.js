@@ -14,6 +14,7 @@ module.exports = {
         },
         PINK: {
           DEFAULT: "#DAC2F2",
+          HOVER: "#aa97bd",
         },
         SUCCESS: {
           DEFAULT: "#5EDC4B",
