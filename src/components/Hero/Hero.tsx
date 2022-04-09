@@ -10,12 +10,12 @@ export const Hero = ({ heroData }: Props) => {
 
   return (
     <section className="py-32 ">
-      <div className="w-3/4 m-auto">
-        <div className="flex items-center justify-between ">
-          <h1 className="text-[48px]  w-2/5   leading-[64px] font-medium text-DARK ">
+      <div className="w-3/4 m-auto ">
+        <div className="flex flex-col items-center justify-center gap-y-12 md:justify-between md:flex-row">
+          <h1 className="text-[32px]  w-full leading-[52px] font-medium text-DARK md:w-2/5 md:text-[48px] md:leading-[64px]">
             {text}
           </h1>
-          <div className="relative w-1/2">
+          <div className="relative w-full md:w-1/2">
             <Image
               src={img!}
               alt="hero-img"

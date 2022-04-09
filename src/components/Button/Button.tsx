@@ -13,10 +13,10 @@ export const Button = ({ content, type, disabled, onClick }: Props) => {
       type={type}
       className={`${
         disabled
-          ? "bg-gray-200 text-[16px] hover:bg-gray-400 leading-[24px] cursor-not-allowed"
+          ? "bg-gray-200  hover:bg-gray-400 leading-[24px] cursor-not-allowed"
           : "bg-PINK hover:bg-PINK-HOVER cursor-pointer"
       }
-      } py-3 px-[54px]  text-[16px] leading-[24px] rounded-3xl`}
+      } py-3 px-[14px] text-[12px] leading-[24px] rounded-3xl md:px-[54px] md:text-[16px]`}
     >
       {content}
     </button>

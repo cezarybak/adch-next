@@ -13,22 +13,22 @@ export const Navbar = ({ pagesData }: Props) => {
   const { asPath } = router;
 
   return (
-    <footer className="py-6 px-16 border-b-[1px] border-GRAY">
+    <footer className="py-6 px-4 border-b-[1px] border-GRAY md:px-16">
       <div className="flex justify-between">
-        <div className="flex gap-x-[97px] items-center">
+        <div className="flex  gap-x-1 items-center md:gap-x-[97px]">
           <Link href={"/"} passHref>
             <a className="cursor-pointer ">
               <Logo className="fill-BLACK  w-[89px] h-[32px]" />
             </a>
           </Link>
-          <div className="flex gap-x-12">
+          <div className="flex gap-x-6 md:gap-x-12">
             {pagesData.map(({ id, url }) => (
               <Link key={id} href={url}>
                 <a
-                  className={`capitalize text-[16px] hover:font-medium ${
+                  className={`capitalize text-[12px] hover:font-medium ${
                     asPath == url &&
                     "underline underline-offset-8 decoration-2 decoration-DARK"
-                  } `}
+                  }  md:text-[16px]`}
                 >
                   {url.replace("/", "")}
                 </a>

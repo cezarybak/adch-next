@@ -33,14 +33,14 @@ export const Newsletter = () => {
   return (
     <section className="flex flex-col justify-center py-32">
       <div className="flex flex-col mx-auto gap-y-16 ">
-        <h1 className="text-center text-BLACK leading-[56px] text-[40px] font-medium ">
+        <h1 className="text-center text-BLACK leading-[56px] text-[28px] font-medium md:text-[40px]">
           Sign up for Newsletter
         </h1>
-        <div className="flex gap-x-[16px]">
+        <div className="flex flex-col gap-y-[16px] text-center md:flex-row md:gap-x-[16px]">
           <input
             value={email}
             placeholder="Type your email"
-            className="bg-GRAY rounded-3xl placeholder-BLACK w-[416px]  px-[32px] py-[14px]"
+            className="bg-GRAY rounded-3xl text-[12px] placeholder-BLACK w-[360px] px-[32px] py-[14px] md:w-[416px] md:text-[16px]"
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -56,7 +56,7 @@ export const Newsletter = () => {
         <span
           className={`${
             status.status === 200 ? "text-GREEN" : "text-red-800"
-          } text-xl font-normal mt-12 leading-[22px] text-[14px] text-center`}
+          } text-xl font-normal mt-12 leading-[22px] text-[12px] text-center md:text-[14px]`}
         >
           {status.message}
         </span>
