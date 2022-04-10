@@ -7,10 +7,6 @@ export type SectionObjectType = {
   img?: string;
 };
 
-type NewsletterType = {
-  type: string;
-};
-
 type Navigation = {
   url: string;
   id: string;

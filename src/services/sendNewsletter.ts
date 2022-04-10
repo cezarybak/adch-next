@@ -1,5 +1,4 @@
 import axios from "axios";
-import { SendNewsletterType } from "../types";
 import { auth, CMS_LINK } from "./auth";
 
 type NewsletterBodyType = {
