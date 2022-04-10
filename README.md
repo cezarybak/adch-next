@@ -19,5 +19,6 @@ CMS_LINK=**
 ```
 
 # A Lighthouse report in Chrome DevTools:
-![Screenshot from 2022-04-10 19-22-51](https://user-images.githubusercontent.com/54915289/162631655-68e54cd7-5a30-414c-8536-7a70e1f2f98d.png)
+![Screenshot from 2022-04-10 19-24-44](https://user-images.githubusercontent.com/54915289/162631707-04dec505-0bc5-4c37-bf34-c9236e37e1c8.png)
+
 
