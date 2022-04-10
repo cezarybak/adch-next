@@ -1,5 +1,6 @@
 import { SectionObjectType } from "../../types";
 import Image from "next/image";
+import { useState } from "react";
 
 type Props = {
   heroData: SectionObjectType;
@@ -7,6 +8,7 @@ type Props = {
 
 export const Hero = ({ heroData }: Props) => {
   const { img, text } = heroData;
+  const [ratio, setRatio] = useState(16 / 9);
 
   return (
     <section className="py-32 ">
@@ -20,6 +22,7 @@ export const Hero = ({ heroData }: Props) => {
               src={img!}
               alt="hero-img"
               layout="responsive"
+              objectFit={"cover"}
               height={384}
               width={516}
             />

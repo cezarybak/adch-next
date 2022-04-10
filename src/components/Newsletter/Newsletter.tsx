@@ -56,7 +56,7 @@ export const Newsletter = () => {
         <span
           className={`${
             status.status === 200 ? "text-GREEN" : "text-red-800"
-          } text-xl font-normal mt-12 leading-[22px] text-[12px] text-center md:text-[14px]`}
+          }  font-normal mt-12 leading-[22px] text-[12px] text-center md:text-[14px]`}
         >
           {status.message}
         </span>
